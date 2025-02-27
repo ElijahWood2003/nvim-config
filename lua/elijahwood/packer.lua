@@ -27,6 +27,9 @@ return require('packer').startup(function(use)
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
 
+	--	use('nvim-java/nvim-java')
+--	use('palantir/python-language-server')
+
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		requires = {

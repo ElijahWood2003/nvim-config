@@ -1,12 +1,5 @@
 local lsp = require('lsp-zero')
 
-vim.api.nvim_create_autocmd('LspAttach', {
-  callback = function(event)
-    -- see :help lsp-zero-keybindings
-    -- to learn the available actions
-    lsp_zero.default_keymaps({buffer = event.buf})
-  end
-})
 
 lsp.on_attach(function(client, bufnr)
 	local opts = {buffer = bufnr, remap = false}
@@ -22,6 +15,18 @@ lsp.on_attach(function(client, bufnr)
 	vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
 	vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
+
+lsp.extend_lspconfig({
+	sign_text = true,
+	lsp_attach = lsp_attach,
+	capabilities = require('cmp_nvim_lsp').default_capabilities()
+})
+
+-- Replace the language servers listed here
+-- with the ones you have installed in your system
+-- require('lspconfig').python_language_server.setup({})
+require('lspconfig').lua_ls.setup({})
+--require('lspconfig').jdtls.setup({})
 
 lsp.setup()
 

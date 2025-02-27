@@ -18,5 +18,5 @@ vim.keymap.set("n", "<leader>gp", function()
 	vim.cmd.Git('push')
 end, opts)
 
-vim.keymap.set("n", "<leader>gt", ":Git push -u origin", opts);
+vim.keymap.set("n", "<leader>gu", ":Git push -u origin", opts);
 
