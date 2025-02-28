@@ -25,6 +25,7 @@ end
 -- Creating a function which checks filetype and lsp language and calls
 -- a command based on the table above
 function run_file()
+	-- getting the filetype and lsp name
 	local filetype = vim.bo.filetype
 	local lsp_langauge = get_active_lsp()
 	
@@ -38,14 +39,12 @@ function run_file()
 	end
 	
 	-- Getting absolute path of file
-	local abs_path = vim.fn.expand("%:p");
-	command = command:gsub("%%", abs_path);
-
-	print("Filetype recognized");
+	--	local abs_path = vim.fn.expand("%:p");
+	--	command = command:gsub("%%", abs_path);
 
 	-- Execute the command
 	vim.cmd("!" .. command);
 end
 
 -- Using run_file for custom compile/run command
-vim.keymap.set("n", "<leader>r", "<cmd>lua run_file()<CR>")
+vim.keymap.set("n", "<leader>cr", "<cmd>lua run_file()<CR>");
