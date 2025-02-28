@@ -24,10 +24,10 @@ lsp.extend_lspconfig({
 
 -- Replace the language servers listed here
 -- with the ones you have installed in your system
-require('lspconfig').python_language_server.setup({})
+-- require('lspconfig').python_language_server.setup({})
 require('lspconfig').lua_ls.setup({})
+require'lspconfig'.pyright.setup{}
 --require('lspconfig').jdtls.setup({})
 
 lsp.setup()
-
 
