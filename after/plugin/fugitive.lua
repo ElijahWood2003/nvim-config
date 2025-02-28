@@ -16,7 +16,7 @@ local opts = {buffer = bufnr, remap = false}
 
 vim.keymap.set("n", "<leader>gp", function()
 	vim.cmd('Git push origin')
-end, opts)
+end)
 
-vim.keymap.set("n", "<leader>gu", ":Git push -u origin", opts);
+vim.keymap.set("n", "<leader>gu", ":Git push -u origin")
 
