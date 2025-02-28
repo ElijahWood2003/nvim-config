@@ -8,7 +8,7 @@
 --For more help with :Git see :h :Git or :G when in the :Git buffer.
 
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git);
-vim.keymap.set("n", "<leader>ga", ":Git add .");
+vim.keymap.set("n", "<leader>ga", vim.cmd('Git add .'));
 vim.keymap.set("n", "<leader>gc", ":Git commit -m ");
 
 local bufnr = vim.api.nvim_get_current_buf()
