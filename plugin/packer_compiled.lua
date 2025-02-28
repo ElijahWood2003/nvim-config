@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/Users/elijah/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["python-language-server"] = {
+    loaded = true,
+    path = "/Users/elijah/.local/share/nvim/site/pack/packer/start/python-language-server",
+    url = "https://github.com/palantir/python-language-server"
+  },
   ["rose-pine"] = {
     config = { "\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0" },
     loaded = true,
